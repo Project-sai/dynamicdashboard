@@ -1,0 +1,294 @@
+/* Container */
+.dashboard-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  /* height: 100vh; */
+}
+
+/* Left Section */
+.dashboard-left {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-row,
+.bottom-row {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-card,
+.investment-stats,
+.property-slider,
+.total-distributions {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  flex: 1;
+}
+
+.dashboard-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-card-header h3 {
+  margin: 0;
+}
+
+.badge {
+  background: #4f46e5;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.dashboard-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.dashboard-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Investment Stats */
+.investment-stats {
+  flex: 1;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-card {
+  flex: 1;
+  text-align: center;
+  background: #f3f4f6;
+  margin: 5px;
+  /* padding: 10px; */
+  border-radius: 8px;
+}
+
+/* Bottom Row */
+.property-slider,
+.total-distributions {
+  flex: 1;
+}
+
+/* Right Section */
+.dashboard-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.my-cards,
+.top-picks {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.my-cards h3 {
+  margin-bottom: 10px;
+}
+
+.card-balance h2 {
+  color: #4f46e5;
+}
+
+.top-picks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-picks li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+  
+  .house{
+    width: 10px;
+    height: 100px;
+  }
+
+
+
+  /* my cards css */
+
+.card {
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0); 
+  color: white; 
+  border-radius: 10px;
+  padding: 15px; 
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+}
+.my-cards h4{
+  font-size: 15px;
+  margin-top: -10px;
+}
+.card-balance {
+  margin-bottom: 15px; 
+}
+
+.card-balance p {
+  font-size: 12px;
+}
+
+.card-balance h2 {
+  font-size: 24px; 
+  font-weight: bold;
+  color: white !important;
+}
+
+.card-profit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-profit p {
+  font-size: 12px; 
+}
+
+.card-profit span {
+  font-size: 16px; 
+}
+
+
+/* investment stats css */
+.investment-stats {
+  padding: 20px;
+ 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.investment-stats h3 {
+  margin-bottom: 20px; 
+  color: #3f51b5; 
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 15px; 
+}
+
+.stat-card {
+  color: white; 
+  border-radius: 10px;
+  padding: 15px;
+  position: relative; 
+  transition: transform 0.2s; 
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); 
+}
+
+.stat-card p {
+  margin: 0; 
+}
+
+.stat-card span {
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+/* Different background colors for each card */
+.card-total-investment {
+  background-color: #4caf50 !important; 
+}
+
+.card-weekly-returns {
+  background-color: #2196f3 !important; 
+}
+
+.card-expenses {
+  background-color: #f44336 !important; 
+}
+
+/* Tooltip styling */
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.75); 
+  color: #fff; 
+  text-align: center;
+  
+  position: absolute;
+  
+  bottom: -30px; 
+  
+  left: 50%;
+  
+   transform: translateX(-50%);
+  
+   padding: 5px;
+  
+   opacity: .9; 
+   transition: visibility .2s ease-in-out, opacity .2s ease-in-out; 
+}
+
+/* Show tooltip on hover */
+.stat-card:hover .tooltip {
+   visibility: visible;
+   opacity: .9;
+}
+/* portofolio css */
+.property-slider {
+  padding: 20px;
+  background-color: #f7f8fc; 
+  border-radius: 10px;
+  height: 200px;
+  overflow: auto;
+}
+
+.property-slider h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 15px; 
+}
+
+.portfolio-card {
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  font-size: 18px; 
+  font-weight: bold; 
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+}
