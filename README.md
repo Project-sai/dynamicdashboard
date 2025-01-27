@@ -35,4 +35,4 @@ react-router-dom
 react-icons
 recharts
 
-deployed in netlify: https://dynamicdashboard.netlify.app/
+deployed in netlify: https://dynamicdashboard1.netlify.app/
