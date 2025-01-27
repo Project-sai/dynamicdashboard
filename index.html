@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Replica</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #f3e7fe, #d9e9ff);
+    }
+    .card-shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background: white;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 gradient-bg min-h-screen flex">
+  <!-- Sidebar -->
+  <div class="sidebar fixed top-0 left-0 flex flex-col py-6">
+    <div class="px-6 mb-10">
+      <h1 class="text-2xl font-bold text-purple-600">Logo</h1>
+    </div>
+    <nav class="flex-1 px-6 space-y-4">
+      <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-purple-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-purple-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3M3 3l18 18" />
+        </svg>
+        <span>Portfolio</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-purple-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+        <span>Stats</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-purple-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 00-8 0v2m12 0v10a2 2 0 01-2 2H7a2 2 0 01-2-2V9m5 4h4" />
+        </svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+    <div class="px-6">
+      <button class="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">Logout</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 ml-64 p-6">
+    <!-- Navbar -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">Dashboard</h1>
+      <div class="flex items-center space-x-4">
+        <button class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-5-5.917V5a3 3 0 00-6 0v.083A6.002 6.002 0 002 11v3.159c0 .538-.214 1.055-.595 1.436L0 17h5" />
+          </svg>
+          <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+        </button>
+        <div class="flex items-center">
+          <span class="mr-3">Rowena Ravenclaw</span>
+          <img src="https://via.placeholder.com/40" alt="Profile" class="w-10 h-10 rounded-full border-2 border-gray-300">
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="grid grid-cols-12 gap-6">
+      <!-- NFT Marketplace -->
+      <div class="col-span-8 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">NFT Marketplace</h2>
+        <div class="relative">
+          <img src="https://via.placeholder.com/600x300" alt="House Andromeda" class="w-full rounded-lg">
+          <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 text-xs rounded">Top Picks</div>
+          <div class="absolute bottom-4 left-4 bg-white px-3 py-2 rounded-lg flex items-center">
+            <div class="mr-3">
+              <h3 class="text-sm font-bold">House Andromeda</h3>
+              <span class="text-xs text-gray-500">1.44 Ether</span>
+            </div>
+            <img src="https://via.placeholder.com/30" alt="User" class="w-8 h-8 rounded-full border-2 border-gray-300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Investment Stats -->
+      <div class="col-span-4 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">Investment Stats</h2>
+        <ul>
+          <li class="flex justify-between items-center mb-3">
+            <span>Total Investment</span>
+            <span class="text-orange-500">0.56 Ether</span>
+          </li>
+          <li class="flex justify-between items-center mb-3">
+            <span>Weekly Returns</span>
+            <span class="text-green-500">0.005 Ether</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span>Expenses</span>
+            <span class="text-red-500">0.005 Ether</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NFTs Owned -->
+      <div class="col-span-4 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">NFTs Owned</h2>
+        <ul>
+          <li class="flex justify-between items-center mb-3">
+            <span>Roma Avenue</span>
+            <span class="text-green-500">+10%</span>
+          </li>
+          <li class="flex justify-between items-center mb-3">
+            <span>Thorian Park</span>
+            <span class="text-green-500">+19%</span>
+          </li>
+          <li class="flex justify-between items-center mb-3">
+            <span>Linda Mansion</span>
+            <span class="text-red-500">-17%</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span>Villa Mary</span>
+            <span class="text-green-500">+22%</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- My Portfolio -->
+      <div class="col-span-8 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">My Portfolio</h2>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="p-3 bg-gray-50 rounded-lg">
+            <h3 class="text-sm">Mandragora Mansion</h3>
+            <span class="text-xs text-gray-500">0.005 Ether</span>
+          </div>
+          <div class="p-3 bg-gray-50 rounded-lg">
+            <h3 class="text-sm">Halbert Avenue</h3>
+            <span class="text-xs text-gray-500">0.976 Ether</span>
+          </div>
+          <div class="p-3 bg-gray-50 rounded-lg">
+            <h3 class="text-sm">Pom Avenue</h3>
+            <span class="text-xs text-gray-500">0.600 Ether</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Distributions -->
+      <div class="col-span-8 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">Total Distributions</h2>
+        <div class="relative">
+          <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#d9e9ff" fill-opacity="1" d="M0,192L60,176C120,160,240,128,360,106.7C480,85,600,75,720,90.7C840,107,960,149,1080,144C1200,139,1320,85,1380,58.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Top Picks -->
+      <div class="col-span-4 bg-white rounded-xl card-shadow p-4">
+        <h2 class="font-bold mb-4">Top Picks</h2>
+        <ul>
+          <li class="flex justify-between items-center mb-3">
+            <span>Roma Avenue</span>
+            <span class="text-gray-500">$400,000</span>
+          </li>
+          <li class="flex justify-between items-center mb-3">
+            <span>Atlas Shack</span>
+            <span class="text-gray-500">$500,000</span>
+          </li>
+          <li class="flex justify-between items-center mb-3">
+            <span>Germanrin</span>
+            <span class="text-gray-500">$786,000</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span>Heavens</span>
+            <span class="text-gray-500">$667,000</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
